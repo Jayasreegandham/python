@@ -1,0 +1,12 @@
+from fractions import Fraction
+from functools import reduce
+
+def product(fracs):     
+    num=1
+    deno=1
+    for x in list(fracs):
+        num*=x.numerator
+        deno*=x.denominator
+    return str(Fraction(num,deno)).split('/')
+
+if __name__ == '__main__':
